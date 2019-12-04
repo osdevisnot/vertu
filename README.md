@@ -1,3 +1,3 @@
 # vertu
 
-minimal vanillajs state container
+minimal vanilla js state container
