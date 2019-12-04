@@ -1,8 +1,8 @@
 {
 	"name": "vertu",
 	"version": "0.1.0",
-	"license": "MIT",
 	"description": "minimal vanilla js state container",
+	"license": "MIT",
 	"author": "osdevisnot <osdevisnot@gmail.com>",
 	"files": [
 		"dist"
