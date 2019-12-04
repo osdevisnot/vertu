@@ -1,3 +1,13 @@
-import { sum } from '../src/vertu';
+import { store, dispatch, update } from '../src/vertu'
 
-console.log('this works => ', sum(2, 3));
+store.on(state => console.log('state : ', state))
+
+store.init({ count: 10 }, { up: state => ({ count: state.count + 1 }) })
+
+dispatch('up')()
+dispatch('up')()
+
+update('MANUAL', { count: 15 })
+
+dispatch('up')()
+dispatch('up')()
