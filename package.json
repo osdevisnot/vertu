@@ -1,6 +1,6 @@
 {
 	"name": "vertu",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"license": "MIT",
 	"description": "minimal vanilla js state container",
 	"author": "osdevisnot <osdevisnot@gmail.com>",
