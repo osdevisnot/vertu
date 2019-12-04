@@ -1,0 +1,25 @@
+{
+	"name": "vertu",
+	"version": "0.0.0",
+	"license": "MIT",
+	"description": "minimal vanillajs state container",
+	"author": "osdevisnot <osdevisnot@gmail.com>",
+	"files": [
+		"dist"
+	],
+	"main": "dist/vertu.cjs.js",
+	"module": "dist/vertu.esm.js",
+	"source": "src/vertu.js",
+	"browser": "dist/vertu.js",
+	"scripts": {
+		"build": "klap build",
+		"prepublishOnly": "klap build",
+		"start": "klap start",
+		"watch": "klap watch"
+	},
+	"prettier": "@osdevisnot/prettier",
+	"devDependencies": {
+		"@osdevisnot/prettier": "2.1.0",
+		"klap": "3.2.3"
+	}
+}
