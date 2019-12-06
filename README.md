@@ -1,4 +1,7 @@
-# vertu
+![](docs/vertu.png)
+
+[![The GZIP size of vertu](https://img.badgesize.io/https://unpkg.com/vertu?compression=gzip&label=GZIP%20Size)](https://unpkg.com/vertu)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 <details>
 <summary><strong>Installation</strong></summary>
@@ -33,7 +36,7 @@ or a UMD bundle for legacy browsers:
 
 </details>
 
-## Usage
+### Usage
 
 Initialize a store with default state and actions
 
@@ -41,23 +44,23 @@ Initialize a store with default state and actions
 import { store, dispatch } from 'vertu'
 
 store.init(
-	{ count: 10 },
+	{ count: 10 }, // default state
 	{
 		// actions can just return updated state
 		down(state) {
 			return { count: state.count - 1 }
 		},
-		// use arrow functions to define actions
+		// use arrow functions to define action
 		up: state => ({ count: state.count + 1 }),
-		// actions receive current state as first argument and other parameters next
+		// action receives current state as first argument and other parameters next
 		upBy: (state, by) => ({ count: state.count + by }),
 	},
 )
 
-// dispatch an actions
+// dispatch an action
 dispatch('down')
 
-// dispatch with arguments
+// dispatch an action with arguments
 dispatch('upBy', 5)
 ```
 
@@ -75,7 +78,7 @@ For extreme rare cases, you can use `update` function to update the state direct
 update('MANUAL', { count: 100 })
 ```
 
-## Async actions
+### Async actions
 
 `vertu` has built in support to dispatch an async action. The state values will be shallow merged with the result of promise resolution. For example:
 
@@ -88,7 +91,7 @@ const fetchTodos = state =>
 dispatch(fetchTodos) // state will have `state.todos` after promise is resolved
 ```
 
-## Subscriptions
+### Subscriptions
 
 An application can subscribe to state changes using subscriptions API. For example:
 
@@ -96,9 +99,9 @@ An application can subscribe to state changes using subscriptions API. For examp
 store.on((state, actionName) => console.log(`new state after ${actionName}: `, state))
 ```
 
-Subscriptions get called every time the state chagnes.
+> a subscription gets called every time the state chagnes.
 
-## License
+### License
 
 **vertu** is licensed under the [MIT License](http://opensource.org/licenses/MIT).<br>
 Documentation is licensed under [Creative Common License](http://creativecommons.org/licenses/by/4.0/).<br>

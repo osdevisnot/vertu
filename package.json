@@ -1,11 +1,12 @@
 {
 	"name": "vertu",
 	"version": "0.1.0",
-	"description": "minimal vanilla js state container",
+	"description": "super minimal vanilla js state container",
 	"license": "MIT",
 	"author": "osdevisnot <osdevisnot@gmail.com>",
 	"files": [
-		"dist"
+		"dist",
+		"docs"
 	],
 	"main": "dist/vertu.cjs.js",
 	"module": "dist/vertu.esm.js",

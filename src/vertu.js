@@ -1,5 +1,5 @@
 /************************************************************
- *    vertu : minimal vanilla js state container            *
+ *    vertu : super minimal vanilla js state container      *
  *          |                             ^                 *
  *          | dispatch                    | subscriptions   *
  *          v                             |                 *
