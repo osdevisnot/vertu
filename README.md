@@ -7,9 +7,7 @@
 <details>
 <summary><strong>Installation</strong></summary>
 
-### Install from NPM
-
-First, install it from NPM:
+Install it from NPM:
 
 ```bash
 yarn add vertu
@@ -21,15 +19,7 @@ then, use in your application with a module bundler like webpack or parcel:
 import { store, dispatch } from 'vertu'
 ```
 
-### CDN
-
 Alternatively, you can grab a copy from UNPKG CDN:
-
-```html
-<script src="https://unpkg.com/vertu?module" />
-```
-
-or a UMD bundle for legacy browsers:
 
 ```html
 <script src="https://unpkg.com/vertu" />
@@ -100,7 +90,7 @@ An application can subscribe to state changes using subscriptions API. For examp
 store.on((state, actionName) => console.log(`new state after ${actionName}: `, state))
 ```
 
-> a subscription gets called every time the state chagnes.
+> a subscription gets called every time the state changes.
 
 ### License
 

@@ -13,7 +13,6 @@
 	"unpkg": "dist/vertu.esm.js",
 	"module": "dist/vertu.esm.js",
 	"source": "src/vertu.js",
-	"browser": "dist/vertu.js",
 	"scripts": {
 		"build": "klap build",
 		"prepublishOnly": "klap build",
@@ -24,5 +23,8 @@
 	"devDependencies": {
 		"@osdevisnot/prettier": "2.1.0",
 		"klap": "3.2.3"
+	},
+	"klap": {
+		"sourcemap": false
 	}
 }
