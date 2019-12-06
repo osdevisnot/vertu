@@ -2,12 +2,30 @@ import { store, dispatch, update } from '../src/vertu'
 
 store.on(state => console.log('state : ', state))
 
-store.init({ count: 10 }, { up: state => ({ count: state.count + 1 }) })
+store.init(
+	{ count: 10 },
+	{
+		down(state) {
+			return { count: state.count - 1 }
+		},
+		up: state => ({ count: state.count + 1 }),
+		upBy: (state, by) => ({ count: state.count + by }),
+	},
+)
 
-dispatch('up')()
-dispatch('up')()
+dispatch('down')
 
-update('MANUAL', { count: 15 })
+dispatch('upBy', 10)
 
-dispatch('up')()
-dispatch('up')()
+update('MANUAL', { count: 100 })
+
+const upByFive = state => ({ count: state.count - 5 })
+
+dispatch(upByFive)
+
+const fetchTodos = state =>
+	fetch('https://jsonplaceholder.typicode.com/todos')
+		.then(response => response.json())
+		.then(todos => ({ todos })) // api response goes in state.todos
+
+dispatch(fetchTodos) // state will have `state.todos` after promise is resolved
