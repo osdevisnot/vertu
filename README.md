@@ -1,7 +1,8 @@
 ![](docs/vertu.png)
 
-[![The GZIP size of vertu](https://img.badgesize.io/https://unpkg.com/vertu?compression=gzip&label=GZIP%20Size)](https://unpkg.com/vertu)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![](https://img.badgesize.io/https://unpkg.com/vertu?compression=gzip)](https://unpkg.com/vertu)
+[![](https://img.badgesize.io/https://unpkg.com/vertu?compression=brotli)](https://unpkg.com/vertu)
+[![](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 <details>
 <summary><strong>Installation</strong></summary>
