@@ -10,6 +10,7 @@
 		"docs"
 	],
 	"main": "dist/vertu.cjs.js",
+	"unpkg": "dist/vertu.esm.js",
 	"module": "dist/vertu.esm.js",
 	"source": "src/vertu.js",
 	"browser": "dist/vertu.js",
