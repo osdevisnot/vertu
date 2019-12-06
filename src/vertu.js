@@ -1,3 +1,15 @@
+/************************************************************
+ *    vertu : minimal vanilla js state container            *
+ *          |                             ^                 *
+ *          | dispatch                    | subscriptions   *
+ *          v                             |                 *
+ *    +-------------+               +------------+          *
+ *    |             |               |            |          *
+ *    |   actions   ---------------->   state    |          *
+ *    |             |   updates     |            |          *
+ *    +-------------+               +------------+          *
+ ************************************************************/
+
 let merge = (a, b) => Object.assign({}, a, b)
 
 let _state = {},
@@ -26,15 +38,18 @@ let store = {
 	},
 }
 
-let dispatch = (action, ...payload) => event => {
-	if (_actions[action]) {
-		let result = _actions[action](_state, ...payload, event)
-		if (result) {
-			if (result.then) {
-				return result.then(response => update(action, response))
-			}
-			update(action, result)
+let dispatch = (action, ...payload) => {
+	let result
+	if (typeof action === 'string' && _actions[action]) {
+		result = _actions[action](_state, ...payload)
+	} else {
+		result = action(_state, ...payload)
+	}
+	if (result) {
+		if (result.then) {
+			return result.then(response => update(action, response))
 		}
+		return update(action, result)
 	}
 }
 
