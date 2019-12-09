@@ -12,20 +12,47 @@
 	"main": "dist/vertu.cjs.js",
 	"unpkg": "dist/vertu.esm.js",
 	"module": "dist/vertu.esm.js",
-	"source": "src/vertu.js",
+	"source": "src/vertu.tsx",
 	"browser": "dist/vertu.js",
+	"types": "dist/types/index.d.ts",
 	"scripts": {
-		"build": "klap build",
-		"prepublishOnly": "klap build",
-		"start": "klap start",
-		"watch": "klap watch"
+		"build": "tslib build",
+		"coverage": "tslib coverage",
+		"coveralls": "tslib coveralls",
+		"format": "tslib format",
+		"lint": "tslib lint",
+		"prepare": "tslib build",
+		"pub": "tslib pub",
+		"setup": "tslib setup",
+		"start": "tslib start",
+		"test": "tslib test",
+		"watch": "tslib watch"
 	},
-	"prettier": "@osdevisnot/prettier",
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx,css,json,md}": [
+			"tslib format",
+			"git add"
+		],
+		"package.json": [
+			"sort-package-json",
+			"git add"
+		]
+	},
+	"prettier": "tslib-cli",
 	"devDependencies": {
-		"@osdevisnot/prettier": "2.1.0",
-		"klap": "3.4.0"
+		"@types/jest": "24.0.23",
+		"husky": "3.1.0",
+		"lint-staged": "9.5.0",
+		"sort-package-json": "1.30.0",
+		"tslib-cli": "6.0.8"
 	},
 	"klap": {
-		"sourcemap": false
+		"sourcemap": false,
+		"example": "public/index.tsx"
 	}
 }
