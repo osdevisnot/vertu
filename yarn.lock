@@ -9,10 +9,10 @@
   dependencies:
     prettier "*"
 
-klap@3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/klap/-/klap-3.2.3.tgz#616ccee3a3c99183c002ef19214f7a3dc34fc743"
-  integrity sha512-qIO6/R97UmObe3BFX2M8EfIjIg90CY0KsUHxoZ8VsDYJx7DoaVzEPyHtj1aBzUP5GyJHOQL1U3wReLigxxjV/A==
+klap@3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/klap/-/klap-3.4.0.tgz#302f735881f8c711ce0117af6b1134e9e119bc32"
+  integrity sha512-jzld1KGAh1eoAB175HP1O8qNVwRuPWEc53csN32abrDZYlTRgcrXxbDuwtu+ntxxk8bc3Md9VapeGxNNm45wZA==
 
 prettier@*:
   version "1.19.1"

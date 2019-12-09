@@ -25,6 +25,12 @@ Alternatively, you can grab a copy from UNPKG CDN:
 <script src="https://unpkg.com/vertu" />
 ```
 
+Want a UMD build from UNPKG CDN?
+
+```html
+<script src="https://unpkg.com/vertu/vertu.js" />
+```
+
 </details>
 
 ### Usage
