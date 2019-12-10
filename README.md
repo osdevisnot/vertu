@@ -1,8 +1,12 @@
 ![](docs/vertu.png)
 
-[![](https://img.badgesize.io/https://unpkg.com/vertu?compression=gzip)](https://unpkg.com/vertu)
-[![](https://img.badgesize.io/https://unpkg.com/vertu?compression=brotli)](https://unpkg.com/vertu)
-[![](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Gzip Size](https://img.badgesize.io/https://unpkg.com/vertu?compression=gzip)](https://unpkg.com/vertu)
+[![Brotli Size](https://img.badgesize.io/https://unpkg.com/vertu?compression=brotli)](https://unpkg.com/vertu)
+[![Build Status](https://travis-ci.org/osdevisnot/vertu.svg?branch=master)](https://travis-ci.org/osdevisnot/vertu)
+[![Coverage Status](https://coveralls.io/repos/github/osdevisnot/vertu/badge.svg?branch=master)](https://coveralls.io/github/osdevisnot/vertu?branch=master)
+[![License MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+## Features
 
 <details>
 <summary><strong>Installation</strong></summary>
@@ -32,6 +36,8 @@ Want a UMD build from UNPKG CDN?
 ```
 
 </details>
+
+## State Container
 
 ### Usage
 
@@ -98,7 +104,25 @@ store.on((state, actionName) => console.log(`new state after ${actionName}: `, s
 
 > a subscription gets called every time the state changes.
 
-### License
+## Contributing
+
+Scaffolded using [`tslib-cli`](https://www.npmjs.com/package/tslib-cli).
+
+Run `yarn` or `npm install` in root folder to setup your project.
+
+### Available Commands:
+
+```bash
+yarn build # builds the package
+yarn test # run tests for the package
+yarn coverage # run tests and generate coverage reports
+yarn pub # publish to NPM
+yarn format # prettier format
+yarn lint # lint pkg files
+yarn setup # clean setup
+```
+
+## License
 
 **vertu** is licensed under the [MIT License](http://opensource.org/licenses/MIT).<br>
 Documentation is licensed under [Creative Common License](http://creativecommons.org/licenses/by/4.0/).<br>
