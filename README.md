@@ -1,4 +1,4 @@
-# vertu
+![](docs/vertu.png)
 
 [![Gzip Size](https://img.badgesize.io/https://unpkg.com/vertu?compression=gzip)](https://unpkg.com/vertu)
 [![Brotli Size](https://img.badgesize.io/https://unpkg.com/vertu?compression=brotli)](https://unpkg.com/vertu)
@@ -7,8 +7,6 @@
 [![License MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
-
-- [x] minimal vanilla js state container
 
 <details>
 <summary><strong>Installation</strong></summary>
@@ -40,8 +38,6 @@ Want a UMD build from UNPKG CDN?
 </details>
 
 ## State Container
-
-![](docs/vertu.png)
 
 ### Usage
 
