@@ -1,6 +1,6 @@
 import { store, dispatch, update } from '../src/vertu'
 
-store.on(state => console.log('state : ', state))
+store.on((state, action) => console.log('state : ', state, action))
 
 store.init(
 	{ count: 10 },
