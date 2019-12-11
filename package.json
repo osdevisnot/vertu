@@ -48,8 +48,8 @@
 		"@types/jest": "24.0.23",
 		"husky": "3.1.0",
 		"lint-staged": "9.5.0",
-		"sort-package-json": "1.30.0",
-		"tslib-cli": "6.0.8"
+		"sort-package-json": "1.31.0",
+		"tslib-cli": "6.0.9"
 	},
 	"klap": {
 		"sourcemap": false,
