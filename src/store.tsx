@@ -15,6 +15,8 @@ export type Action = (state: State, ...payload: any[]) => State | Promise<State>
 export type Actions = Record<string, Action>
 export type Subscription = (state: State, action: string | Action) => unknown
 
+let EMPTY_OBJECT = {}
+
 let merge = (a, b) => Object.assign({}, a, b)
 
 let _state: State = {},
@@ -26,18 +28,19 @@ let update = (action: string | Action, state: State) => {
   _events.map(handler => handler(_state, action))
 }
 
+let off = (idx: number): void => {
+  _events.splice(idx, 1)
+}
+
 let store = {
-  off(handler: Subscription): void {
-    _events.splice(_events.indexOf(handler) >>> 0, 1)
-  },
   on(handler: Subscription): () => void {
-    _events.push(handler)
-    return store.off.bind(store, handler)
+    let idx = _events.push(handler)
+    return off.bind(EMPTY_OBJECT, idx - 1)
   },
   get state(): State {
     return _state
   },
-  init(state: State, actions: Actions = {}) {
+  init(state: State, actions: Actions = EMPTY_OBJECT) {
     _state = merge(_state, state)
     _actions = merge(_actions, actions)
   },
