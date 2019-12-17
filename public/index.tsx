@@ -29,3 +29,5 @@ const fetchTodos = state =>
     .then(todos => ({ todos })) // api response goes in state.todos
 
 dispatch(fetchTodos) // state will have `state.todos` after promise is resolved
+
+setInterval(() => dispatch('down'), 3000)
