@@ -6,8 +6,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/osdevisnot/vertu/badge.svg?branch=master)](https://coveralls.io/github/osdevisnot/vertu?branch=master)
 [![License MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-## Features
-
 <details>
 <summary><strong>Installation</strong></summary>
 
@@ -37,9 +35,7 @@ Want a UMD build from UNPKG CDN?
 
 </details>
 
-## State Container
-
-### Usage
+## Usage
 
 Initialize a store with default state and actions
 
