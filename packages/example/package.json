@@ -1,0 +1,24 @@
+{
+  "name": "example",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/example.cjs.js",
+  "module": "dist/example.esm.js",
+  "source": "src/example.js",
+  "browser": "dist/example.js",
+  "scripts": {
+    "start": "klap start",
+    "watch": "klap watch"
+  },
+  "dependencies": {
+    "devtools": "latest",
+    "vertu": "latest"
+  },
+  "devDependencies": {
+    "klap": "3.5.2"
+  }
+}

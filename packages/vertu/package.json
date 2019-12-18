@@ -25,7 +25,6 @@
     "klap": "3.5.2"
   },
   "klap": {
-    "sourcemap": false,
-    "example": "public/index.tsx"
+    "sourcemap": false
   }
 }

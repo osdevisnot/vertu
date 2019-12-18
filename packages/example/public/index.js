@@ -1,6 +1,5 @@
-import { store, dispatch, update } from '../src/vertu'
-
-import '../packages/devtools/src/devtools'
+import { store, dispatch, update } from 'vertu'
+import 'vertu/dist/devtools'
 
 store.on((state, action) => console.log('state : ', state, action))
 
