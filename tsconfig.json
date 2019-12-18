@@ -16,6 +16,6 @@
     "target": "esnext",
     "removeComments": true,
     "baseUrl": ".",
-    "paths": { "vertu": ["src/index.tsx"] }
+    "paths": { "vertu": ["src/vertu.tsx"] }
   }
 }
