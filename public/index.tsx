@@ -1,5 +1,7 @@
 import { store, dispatch, update } from '../src/vertu'
 
+import '../packages/devtools/src/devtools'
+
 store.on((state, action) => console.log('state : ', state, action))
 
 store.init(

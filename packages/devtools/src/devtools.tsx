@@ -1,4 +1,4 @@
-import { store, update } from 'vertu'
+import { store, update } from '../../../src/vertu'
 
 const extension = (window as any).__REDUX_DEVTOOLS_EXTENSION__ || (window as any).top.__REDUX_DEVTOOLS_EXTENSION__
 let ignore = false
