@@ -2,6 +2,7 @@
   "name": "@vertu/vertu",
   "version": "0.0.0",
   "private": true,
+  "description": "minimal vanilla js state container",
   "repository": "osdevisnot/vertu",
   "license": "MIT",
   "author": "osdevisnot <osdevisnot@gmail.com>",

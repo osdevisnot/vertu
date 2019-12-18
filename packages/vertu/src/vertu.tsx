@@ -1,5 +1,5 @@
 /************************************************************
- *    vertu : super minimal vanilla js state container      *
+ *       vertu : minimal vanilla js state container         *
  *          |                             ^                 *
  *          | dispatch                    | subscriptions   *
  *          v                             |                 *
@@ -11,7 +11,10 @@
  ************************************************************/
 
 export type State = Record<string, any>
-export type Action = (state: State, ...payload: any[]) => State | Promise<State> | void
+export type Action = (
+  state: State,
+  ...payload: any[]
+) => State | Promise<State> | void
 export type Actions = Record<string, Action>
 export type Subscription = (state: State, action: string | Action) => unknown
 
@@ -57,7 +60,9 @@ let dispatch = (action: string | Action, ...payload) => {
   }
   if (result) {
     if (result.then) {
-      return result.then((response: Record<string, any>) => update(action, response))
+      return result.then((response: Record<string, any>) =>
+        update(action, response)
+      )
     }
     return update(action, result)
   }
