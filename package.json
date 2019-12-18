@@ -7,9 +7,10 @@
   "author": "osdevisnot <osdevisnot@gmail.com>",
   "scripts": {
     "build": "lerna run build",
-    "postinstall": "lerna bootstrap",
     "coverage": "jest --coverage",
-    "coveralls": "coveralls < coverage/lcov.info"
+    "coveralls": "coveralls < coverage/lcov.info",
+    "postinstall": "lerna bootstrap",
+    "prepublishOnly": "lerna run build"
   },
   "prettier": "@osdevisnot/prettier",
   "devDependencies": {
