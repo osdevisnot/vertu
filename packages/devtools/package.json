@@ -2,15 +2,17 @@
   "name": "devtools",
   "version": "0.0.0",
   "license": "MIT",
+  "private": true,
   "files": [
     "dist"
   ],
   "main": "dist/devtools.cjs.js",
-  "module": "dist/devtools.esm.js",
+  "module": "dist/devtools.js",
   "source": "src/devtools.tsx",
-  "browser": "dist/devtools.js",
+  "browser": "dist/devtools.umd.js",
   "scripts": {
     "build": "klap build",
+    "postbuild": "cp dist/*.js ../vertu/dist/.",
     "prepublishOnly": "klap build",
     "start": "klap start",
     "watch": "klap watch"

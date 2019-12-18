@@ -1,0 +1,32 @@
+{
+  "name": "vertu",
+  "version": "0.4.0",
+  "description": "super minimal vanilla js state container",
+  "repository": "osdevisnot/vertu",
+  "license": "MIT",
+  "author": "osdevisnot <osdevisnot@gmail.com>",
+  "files": [
+    "dist",
+    "docs"
+  ],
+  "main": "dist/vertu.cjs.js",
+  "unpkg": "dist/vertu.esm.js",
+  "module": "dist/vertu.esm.js",
+  "source": "src/vertu.tsx",
+  "browser": "dist/vertu.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "klap build",
+    "postbuild": "tsc -p tsconfig.json",
+    "prepublishOnly": "klap build",
+    "start": "klap start",
+    "watch": "klap watch"
+  },
+  "devDependencies": {
+    "klap": "3.5.2"
+  },
+  "klap": {
+    "sourcemap": false,
+    "example": "public/index.tsx"
+  }
+}
