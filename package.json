@@ -1,61 +1,24 @@
 {
-  "name": "vertu",
-  "version": "0.4.0",
-  "description": "super minimal vanilla js state container",
+  "name": "@vertu/vertu",
+  "version": "0.0.0",
+  "private": true,
   "repository": "osdevisnot/vertu",
   "license": "MIT",
   "author": "osdevisnot <osdevisnot@gmail.com>",
-  "files": [
-    "dist",
-    "docs"
-  ],
-  "main": "dist/vertu.cjs.js",
-  "unpkg": "dist/vertu.esm.js",
-  "module": "dist/vertu.esm.js",
-  "source": "src/vertu.tsx",
-  "browser": "dist/vertu.js",
-  "types": "dist/types/index.d.ts",
   "scripts": {
-    "prebuild": "tslib build",
-    "build": "cd packages/devtools && yarn build",
-    "postbuild": "mv packages/devtools/dist/*.js dist/.",
-    "coverage": "tslib coverage",
-    "coveralls": "tslib coveralls",
-    "format": "tslib format",
-    "postinstall": "cd packages/devtools && yarn",
-    "lint": "tslib lint",
-    "prepare": "yarn build",
-    "pub": "tslib pub",
-    "setup": "tslib setup",
-    "start": "tslib start",
-    "test": "tslib test",
-    "watch": "tslib watch"
+    "build": "lerna run build",
+    "postinstall": "lerna bootstrap",
+    "coverage": "jest --coverage",
+    "coveralls": "coveralls < coverage/lcov.info"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,css,json,md}": [
-      "tslib format",
-      "git add"
-    ],
-    "package.json": [
-      "sort-package-json",
-      "git add"
-    ]
-  },
-  "prettier": "tslib-cli",
+  "prettier": "@osdevisnot/prettier",
   "devDependencies": {
+    "@osdevisnot/prettier": "3.0.1",
     "@types/jest": "24.0.23",
-    "husky": "3.1.0",
-    "lint-staged": "9.5.0",
-    "sort-package-json": "1.31.0",
-    "tslib-cli": "6.0.9"
-  },
-  "klap": {
-    "sourcemap": false,
-    "example": "public/index.tsx"
+    "coveralls": "3.0.9",
+    "jest": "24.9.0",
+    "lerna": "3.19.0",
+    "ts-jest": "24.2.0",
+    "typescript": "3.7.3"
   }
 }
