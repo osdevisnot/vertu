@@ -15,6 +15,9 @@
     "start": "klap start",
     "watch": "klap watch"
   },
+  "dependencies": {
+    "vertu": "latest"
+  },
   "devDependencies": {
     "klap": "3.5.2"
   },
