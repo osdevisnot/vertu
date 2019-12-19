@@ -12,7 +12,6 @@
   "browser": "dist/devtools.umd.js",
   "scripts": {
     "build": "klap build",
-    "postbuild": "cp dist/*.js ../vertu/dist/.",
     "start": "klap start",
     "watch": "klap watch"
   },
