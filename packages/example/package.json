@@ -19,6 +19,6 @@
     "vertu": "latest"
   },
   "devDependencies": {
-    "klap": "3.5.2"
+    "klap": "3.5.3"
   }
 }

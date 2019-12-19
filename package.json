@@ -16,7 +16,7 @@
   "prettier": "@osdevisnot/prettier",
   "devDependencies": {
     "@osdevisnot/prettier": "3.0.1",
-    "@types/jest": "24.0.23",
+    "@types/jest": "24.0.24",
     "coveralls": "3.0.9",
     "jest": "24.9.0",
     "lerna": "3.19.0",

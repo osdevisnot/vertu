@@ -22,7 +22,7 @@
     "watch": "klap watch"
   },
   "devDependencies": {
-    "klap": "3.5.2"
+    "klap": "3.5.3"
   },
   "klap": {
     "sourcemap": false
