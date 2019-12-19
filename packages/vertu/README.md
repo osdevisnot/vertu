@@ -12,14 +12,16 @@
 - **No Framework** - use it standalone, or with your favourite view library.
 - **Familier** - ideas and concepts from redux like libraries.
 - **Best DX** - with Redux Devtools Integration.
-- **Seamless Async Actions** - using [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) or [async/await](https://javascript.info/async-await) for actions.
 - **Inline Actions** - define actions on the go.
+- **Seamless Async Actions** - using [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) or [async/await](https://javascript.info/async-await) for actions.
 - **No Boilerplate** - All the benifits of _Redux_ without the _ceremony_.
 
 ## :grey_question: Motivation
 
-- As much as I love `redux` as a pattern, the ceremony and boilerplate around state management is often overwhelming.
-- An ideal solution in my mind should provide tools and techniques to organize the data without enforcing strict architechure and methodology.
+- As much as I love `redux` as a pattern, the ceremony and boilerplate around state management is often overwhelming. I wanted to create a solution that provides tools and techniques to organize application data without enforcing strict architechure and methodology.
+- I also wanted this solution to be as light weight as possible. See size comparison with some of the existing solutions:
+
+![](docs/sizes.png)
 
 ## :boom: API Overview
 
