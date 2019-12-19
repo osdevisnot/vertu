@@ -1,0 +1,28 @@
+{
+  "name": "devtools",
+  "version": "0.4.2-alpha.0",
+  "private": true,
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/devtools.cjs.js",
+  "module": "dist/devtools.js",
+  "source": "src/devtools.tsx",
+  "browser": "dist/devtools.umd.js",
+  "scripts": {
+    "build": "klap build",
+    "start": "klap start",
+    "watch": "klap watch"
+  },
+  "dependencies": {
+    "vertu": "latest"
+  },
+  "devDependencies": {
+    "klap": "3.5.3"
+  },
+  "klap": {
+    "minify": false,
+    "sourcemap": false
+  }
+}
