@@ -6,19 +6,26 @@
 [![Coverage Status](https://coveralls.io/repos/github/osdevisnot/vertu/badge.svg?branch=master)](https://coveralls.io/github/osdevisnot/vertu?branch=master)
 [![License MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-## Features
+## :sparkles: Features
 
-- **Small Footprint** (~268 B min + gzip), optimal for 3G connections
+- **Small Footprint** (less than 300 B min + gzip), optimal for 3G connections.
 - **No Framework** - use it standalone, or with your favourite view library.
 - **Familier** - ideas and concepts from redux like libraries.
-- **Simple** - shallow merged state updates
-- **Best DX** - Redux Devtools Integration
-- **Seamless Async Actions** - use [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) or [async/await](https://javascript.info/async-await) for actions.
-- **Inline Actions** - define actions on the go
-- **No Boilerplate** - All the redux benifits without the _boilerplate_
+- **Best DX** - with Redux Devtools Integration.
+- **Seamless Async Actions** - using [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) or [async/await](https://javascript.info/async-await) for actions.
+- **Inline Actions** - define actions on the go.
+- **No Boilerplate** - All the benifits of _Redux_ without the _ceremony_.
 
-<details>
-<summary><strong>Installation</strong></summary>
+## :grey_question: Motivation
+
+- As much as I love `redux` as a pattern, the ceremony and boilerplate around state management is often overwhelming.
+- An ideal solution in my mind should provide tools and techniques to organize the data without enforcing strict architechure and methodology.
+
+## :boom: API Overview
+
+![](docs/code.png)
+
+## Installation
 
 Install it from NPM:
 
@@ -44,11 +51,9 @@ Want a UMD build from UNPKG CDN?
 <script src="https://unpkg.com/vertu/vertu.js" />
 ```
 
-</details>
+## :plate_with_cutlery: Usage
 
-## Usage
-
-Initialize a store with default state and actions
+Initialize state and actions and use dispatch to fire the actions.
 
 ```js
 import { store, dispatch } from 'vertu'
@@ -76,18 +81,6 @@ dispatch('down')
 
 // dispatch an action with arguments
 dispatch('upBy', 5)
-
-// define and dispatch actions outside the store...
-const upByFive = state => ({ count: state.count - 5 })
-dispatch(upByFive)
-
-// Asunc Actions
-const fetchTodos = state =>
-  fetch('https://jsonplaceholder.typicode.com/todos')
-    .then(response => response.json())
-    .then(todos => ({ todos })) // api response goes in state.todos
-
-dispatch(fetchTodos) // state will have `state.todos` after promise is resolved
 ```
 
 Above example assumes a global state and actions container. However, actions can also be defined outside the state container. For example:
@@ -104,7 +97,9 @@ For extreme rare cases, you can use `update` function to update the state direct
 update('MANUAL', { count: 100 })
 ```
 
-### Async actions
+> NB: Using `update` is generally discouraged. The export mainly serves `devtools`.
+
+## :muscle: Async actions
 
 `vertu` has built in support to dispatch an async action. The state values will be shallow merged with the result of promise resolution. For example:
 
@@ -117,7 +112,7 @@ const fetchTodos = state =>
 dispatch(fetchTodos) // state will have `state.todos` after promise is resolved
 ```
 
-### Subscriptions
+## :telescope: Subscriptions
 
 An application can subscribe to state changes using subscriptions API. For example:
 
@@ -129,7 +124,7 @@ store.on((state, actionName) =>
 
 > a subscription gets called every time the state changes.
 
-## Devtools
+## :trophy: Devtools
 
 To use [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension) with `vertu`, make sure you have the devtools extension installed.
 
@@ -144,7 +139,7 @@ store.init() ...
 
 ![](docs/devtools.png)
 
-## License
+## :clinking_glasses: License
 
 **vertu** is licensed under the [MIT License](http://opensource.org/licenses/MIT).<br>
 Documentation is licensed under [Creative Common License](http://creativecommons.org/licenses/by/4.0/).<br>
