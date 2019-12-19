@@ -1,6 +1,6 @@
 {
   "name": "vertu",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "minimal vanilla js state container",
   "repository": "osdevisnot/vertu",
   "license": "MIT",
