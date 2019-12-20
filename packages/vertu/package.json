@@ -16,14 +16,13 @@
   "browser": "dist/vertu.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "prebuild": "klap build",
-    "build": "tsc -p tsconfig.json",
-    "postbuild": "cp ../devtools/dist/*.js dist/.",
+    "build": "klap build",
+    "postbuild": "tsc -p tsconfig.json",
     "start": "klap start",
     "watch": "klap watch"
   },
   "devDependencies": {
-    "klap": "3.5.3"
+    "klap": "3.5.4"
   },
   "klap": {
     "sourcemap": false

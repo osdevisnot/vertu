@@ -1,5 +1,5 @@
 import { store, dispatch } from 'vertu'
-import 'vertu/dist/devtools' // optionally enable redux devtools
+import '@vertu/devtools' // optionally enable redux devtools
 
 store.init(
   { count: 10 }, // default state
