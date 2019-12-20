@@ -1,6 +1,6 @@
 {
   "name": "kitchen-sync",
-  "version": "0.0.0",
+  "version": "0.6.0",
   "private": true,
   "license": "MIT",
   "files": [
@@ -12,8 +12,8 @@
     "watch": "klap watch"
   },
   "dependencies": {
-    "@vertu/devtools": "0.0.1",
-    "vertu": "0.5.1"
+    "@vertu/devtools": "^0.6.0",
+    "vertu": "^0.6.0"
   },
   "devDependencies": {
     "klap": "3.5.4"

@@ -1,6 +1,6 @@
 {
   "name": "@vertu/devtools",
-  "version": "0.0.1",
+  "version": "0.6.0",
   "description": "minimal vanilla js state container",
   "repository": "osdevisnot/vertu",
   "license": "MIT",
@@ -21,7 +21,7 @@
     "watch": "klap watch"
   },
   "dependencies": {
-    "vertu": "0.5.1"
+    "vertu": "^0.6.0"
   },
   "devDependencies": {
     "klap": "3.5.4"
