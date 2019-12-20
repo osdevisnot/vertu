@@ -59,7 +59,7 @@ Initialize state and actions and use dispatch to fire the actions.
 
 ```js
 import { store, dispatch } from 'vertu'
-import 'vertu/dist/devtools' // optionally enable redux devtools
+import '@vertu/devtools' // optionally enable redux devtools
 
 store.init(
   { count: 10 }, // default state
@@ -99,7 +99,7 @@ For extreme rare cases, you can use `update` function to update the state direct
 update('MANUAL', { count: 100 })
 ```
 
-> NB: Using `update` is generally discouraged. The export mainly serves `devtools`.
+> NB: Using `update` is generally discouraged. The export is intended for redux devtools.
 
 ## :muscle: Async actions
 
@@ -130,11 +130,11 @@ store.on((state, actionName) =>
 
 To use [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension) with `vertu`, make sure you have the devtools extension installed.
 
-Your code also needs to import `vertu/dist/devtools` to enable devtools support for the project.
+Your code also needs to import `@vertu/devtools` to enable devtools support for the project.
 
 ```js
 import { store, dispatch, update } from 'vertu'
-import 'vertu/dist/devtools' // enable the devtools support
+import '@vertu/devtools' // enable the devtools support
 
 store.init() ...
 ```

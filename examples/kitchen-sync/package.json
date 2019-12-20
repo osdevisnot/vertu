@@ -1,0 +1,21 @@
+{
+  "name": "kitchen-sync",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "module": "dist/kitchen-sync.esm.js",
+  "scripts": {
+    "start": "klap start",
+    "watch": "klap watch"
+  },
+  "dependencies": {
+    "@vertu/devtools": "0.0.1",
+    "vertu": "0.5.1"
+  },
+  "devDependencies": {
+    "klap": "3.5.4"
+  }
+}

@@ -1,25 +1,30 @@
 {
-  "name": "devtools",
-  "version": "0.5.0",
-  "private": true,
+  "name": "@vertu/devtools",
+  "version": "0.0.1",
+  "description": "minimal vanilla js state container",
+  "repository": "osdevisnot/vertu",
   "license": "MIT",
+  "author": "osdevisnot <osdevisnot@gmail.com>",
   "files": [
     "dist"
   ],
   "main": "dist/devtools.cjs.js",
-  "module": "dist/devtools.js",
+  "unpkg": "dist/devtools.esm.js",
+  "module": "dist/devtools.esm.js",
   "source": "src/devtools.tsx",
-  "browser": "dist/devtools.umd.js",
+  "browser": "dist/devtools.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "build": "klap build",
+    "postbuild": "tsc -p tsconfig.json",
     "start": "klap start",
     "watch": "klap watch"
   },
   "dependencies": {
-    "vertu": "latest"
+    "vertu": "0.5.1"
   },
   "devDependencies": {
-    "klap": "3.5.3"
+    "klap": "3.5.4"
   },
   "klap": {
     "minify": false,
